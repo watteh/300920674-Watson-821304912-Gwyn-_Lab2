@@ -12,26 +12,16 @@ namespace _300920674_Watson_821304912_Gwyn__Lab2.Controllers
     {
         public IActionResult Index()
         {
-            if (User.Identity.IsAuthenticated)
-            {
-                return View();
-            } else
-            {
-                return View("/Views/Account/Login.cshtml");
-            }
+            return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
