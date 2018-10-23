@@ -12,7 +12,13 @@ namespace _300920674_Watson_821304912_Gwyn__Lab2.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Movies");
+            } else
+            {
+                return View();
+            }
         }
 
         public IActionResult About()
